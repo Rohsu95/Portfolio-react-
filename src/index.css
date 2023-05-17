@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "googleSingleDay";
+  src: url(./assets/fonts/Single_Day/SingleDay-Regular.ttf);
+}
+:root {
+  --font-googleSingleDay: "googleSingleDay";
+}
