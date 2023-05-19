@@ -36,7 +36,7 @@ const Nav = () => {
         <LiContainer>
           <HashLink
             smooth
-            to="/#"
+            to="/"
             style={{ textDecoration: "none", color: `${theme.colors.font}` }}
           >
             <NavSPan>About</NavSPan>
@@ -45,7 +45,7 @@ const Nav = () => {
         <LiContainer>
           <HashLink
             smooth
-            to="/#project"
+            to="project"
             style={{ textDecoration: "none", color: `${theme.colors.font}` }}
           >
             <NavSPan> Project</NavSPan>
@@ -54,7 +54,7 @@ const Nav = () => {
         <LiContainer>
           <HashLink
             smooth
-            to="/Contact"
+            to="contact"
             style={{ textDecoration: "none", color: `${theme.colors.font}` }}
           >
             <NavSPan>Contact</NavSPan>

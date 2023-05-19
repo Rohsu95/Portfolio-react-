@@ -28,7 +28,7 @@ const ArticleContainer = styled.article`
 `;
 
 const TitleContainer = styled.h1`
-  font-size: 5rem;
+  font-size: 6rem;
   margin-bottom: 3rem;
   background-clip: border-box;
   background: linear-gradient(to right top, #b9eddd, #c9a7eb, #2cd3e1);

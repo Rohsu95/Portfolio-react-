@@ -5,6 +5,7 @@ import { MdPhoneIphone } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
 import { GoMail } from "react-icons/go";
 import emailjs from "@emailjs/browser";
+import SectionWrapper from "../../components/Wrapper";
 
 const Container = styled.div``;
 const ImgContainer = styled.section`
@@ -21,10 +22,22 @@ const MainTitle = styled.h1`
   background: linear-gradient(to right top, #b9eddd, #c9a7eb, #2cd3e1);
   color: transparent;
   -webkit-background-clip: text;
+
+  @media ${theme.media.mobile} {
+    font-size: 5rem;
+  }
+  @media ${theme.media.phone} {
+    font-size: 4rem;
+  }
 `;
 const MainContainer = styled.main`
   display: flex;
   justify-content: center;
+
+  @media ${theme.media.mobile} {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 const ArticleContainer = styled.article`
   display: flex;
@@ -32,11 +45,49 @@ const ArticleContainer = styled.article`
   justify-content: space-evenly;
   margin-right: 2rem;
   margin-bottom: 1rem;
+
+  @media ${theme.media.mobile} {
+    display: flex;
+    flex-direction: initial;
+    justify-content: center;
+  }
+  @media ${theme.media.phone} {
+    display: flex;
+    justify-content: space-around;
+  }
 `;
 const SectionContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  .ModalText {
+    @media ${theme.media.phone} {
+      display: none;
+      opacity: 0;
+      transition: all ease 0.5s;
+      font-size: 1rem;
+    }
+  }
+  .ModalIcon:hover + .ModalText {
+    display: block;
+    opacity: 1;
+  }
+
+  @media ${theme.media.mobile} {
+    font-size: 0.75rem;
+    margin-left: 1rem;
+  }
+  svg {
+    @media ${theme.media.mobile} {
+      width: 30px;
+    }
+    @media ${theme.media.phone} {
+      width: 30px; // 360
+      display: flex;
+      /* justify-content: center; */
+    }
+  }
 `;
 const FormContainer = styled.form`
   display: flex;
@@ -46,6 +97,10 @@ const FormContainer = styled.form`
 const TitleContainer = styled.div`
   display: flex;
   justify-content: center;
+
+  @media ${theme.media.mobile} {
+    /* width: 4 */
+  }
 `;
 const InputContainer = styled.input`
   width: 30vw;
@@ -58,6 +113,13 @@ const InputContainer = styled.input`
 
   &::placeholder {
     color: ${theme.colors.font};
+  }
+  @media ${theme.media.mobile} {
+    width: 350px; // 360
+  }
+  @media ${theme.media.phone} {
+    /* width: 320px; // 360 */
+    width: 70vw; // 360
   }
 `;
 const TextContainer = styled.textarea`
@@ -72,6 +134,13 @@ const TextContainer = styled.textarea`
 
   &::placeholder {
     color: ${theme.colors.font};
+  }
+
+  @media ${theme.media.mobile} {
+    width: 350px; // 360
+  }
+  @media ${theme.media.phone} {
+    width: 70vw; // 360
   }
 `;
 const Button = styled.button`
@@ -109,29 +178,36 @@ const Contact = () => {
   };
 
   return (
-    <Container>
+    <SectionWrapper id="contact">
+      {/* <Container></Container> */}
       <ImgContainer>
         <MainTitle>Contact</MainTitle>
       </ImgContainer>
       <MainContainer>
         <ArticleContainer>
           <SectionContainer>
-            <section>
+            <section className="ModalIcon">
               <MdPhoneIphone size="45" color="black" />
             </section>
-            <section>010-4964-2335</section>
+            <section className="ModalText">010-4964-2335</section>
           </SectionContainer>
           <SectionContainer>
-            <section>
+            <section className="ModalIcon">
               <GoMail size="45" color="black" />
             </section>
-            <section>shtngur10@gamil.com</section>
+            <section className="ModalText">shtngur10@gmail.com</section>
           </SectionContainer>
           <SectionContainer>
-            <section>
-              <FaGithub size="45" color="black" />
+            <section className="ModalIcon">
+              <a
+                href="https://github.com/rohsuhyoek"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <FaGithub size="45" color="black" />
+              </a>
             </section>
-            <section>https://github.com/rohsuhyoek</section>
+            <section className="ModalText">클릭!</section>
           </SectionContainer>
         </ArticleContainer>
         <FormContainer ref={ref} onSubmit={sendEmail}>
@@ -147,7 +223,7 @@ const Contact = () => {
           <Button type="submit">Send</Button>
         </FormContainer>
       </MainContainer>
-    </Container>
+    </SectionWrapper>
   );
 };
 
