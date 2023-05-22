@@ -1,7 +1,7 @@
 import React from "react";
 import { styled } from "styled-components";
 import theme from "../../styles/Theme";
-// import ProjectItem from "../../components/ProjectItem";
+import ProjectItem from "../../components/ProjectItem";
 
 const TitleContainer = styled.section`
   display: flex;
@@ -72,17 +72,17 @@ const AMove = styled.a`
 const Project = () => {
   const item = [
     {
-      id: "1",
+      id: 1,
       project: "main",
       url: "/image/mainP.jpg",
     },
     {
-      id: "2",
+      id: 2,
       project: "side",
       url: "/image/side.jpg",
     },
     {
-      id: "3",
+      id: 3,
       project: "port",
       url: "/image/port.jpg",
     },
@@ -93,28 +93,9 @@ const Project = () => {
         <MainTitle>Project</MainTitle>
       </TitleContainer>
       <ImgContainer>
-        {/* {item.map((el, idx) => (
+        {item.map((el, idx) => (
           <ProjectItem key={idx} project={el.project} url={el.url} id={el.id} />
-        ))} */}
-        <SectionContainer>
-          <Img src="/image/side.jpg" alt="preImg" />
-          <AMove>
-            <a>더 보기</a>
-          </AMove>
-        </SectionContainer>
-        <SectionContainer>
-          <Img src="/image/port.jpg" alt="preImg" />
-          <AMove>
-            <a>더 보기</a>
-          </AMove>
-        </SectionContainer>
-
-        <SectionContainer>
-          <Img src="/image/port.jpg" alt="preImg" />
-          <AMove>
-            <a>더 보기</a>
-          </AMove>
-        </SectionContainer>
+        ))}
       </ImgContainer>
     </main>
   );
