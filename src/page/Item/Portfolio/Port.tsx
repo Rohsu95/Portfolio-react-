@@ -8,20 +8,21 @@ import { SlControlPlay } from "react-icons/sl";
 import { SideItem } from "../../../components/GifItem";
 import * as s from "../style";
 
-const Side = () => {
+const Port = () => {
   return (
     <div>
       <s.TitleContainer>
-        <s.MainTitle>Real-World</s.MainTitle>
+        <s.MainTitle>PortFolio</s.MainTitle>
       </s.TitleContainer>
       <s.ArticleContainer>
         <SideItem />
         <s.ContentContainer>
           <s.Content>
             <s.ContentRole font_height="1rem" font_mobile="1.25rem">
-              부트캠프에서 배운 내용들을 정리 하기 위해 수료 후 만든 1인
-              프로젝트 입니다. Fire Base를 사용하였으며 사용자 인증 기능 및
-              CRUD가 포함 커뮤니티 페이지입니다.
+              이력서와 함께 제출하기 위해 구현한 웹 포토폴리오 사이트입니다.
+              Slick을 사용하여 슬라이드 형식으로 프로젝트 이미지를 확인할 수
+              있으며 EmailJs 라이브러리를 사용하여 저의 이메일로 메일을 보낼 수
+              있게 하였습니다.
             </s.ContentRole>
           </s.Content>
           <s.Content>
@@ -29,28 +30,16 @@ const Side = () => {
               My Role
             </s.ContentRole>
             <s.ContentRole font_height="1rem" font_mobile="1.25rem">
-              회원 가입, 로그인 페이지 : Fire Base를 사용자 인증 기능이 있으며,
-              유효성 검사 후 로그인.
+              about 페이지 : 저의 프로필 이미지와 GitHub와 notion을
+              연결하였습니다.
             </s.ContentRole>
             <s.ContentRole font_height="1rem" font_mobile="1.25rem">
-              게시글 작성 페이지 : 게시글 작성 (제목, 소제목, 내용, 태그) 기능
-              구현
+              Project 페이지 : 각각의 Project 페이지로 이동 가능하며 Slick을
+              사용하여 슬라이드 형식의 이미지를 확인할 수 있습니다.
             </s.ContentRole>
             <s.ContentRole font_height="1rem" font_mobile="1.25rem">
-              커뮤니티 페이지 : 내가 작성한 글만 보기 기능, 내가 작성한 글 삭제
-              기능, 좋아요 기능,
-            </s.ContentRole>
-            <s.ContentRole font_height="1rem" font_mobile="1.25rem">
-              특정 게시글 조회 페이지 : 선택한 게시글 조회, 댓글 작성, 삭제 기능
-            </s.ContentRole>
-            <s.ContentRole font_height="1rem" font_mobile="1.25rem">
-              게시글 수정 페이지 : 작성한 게시글 수정 기능
-            </s.ContentRole>
-            <s.ContentRole font_height="1rem" font_mobile="1.25rem">
-              마이 페이지 : 프로필 이미지 업로드, 로그 아웃 기능
-            </s.ContentRole>
-            <s.ContentRole font_height="1rem" font_mobile="1.25rem">
-              개인 정보 수정 페이지 : 닉네임, 이메일, 패스워드 수정 기능
+              Contact 페이지 : EmailJs 라이브러리 사용하여 저의 이메일로 메일을
+              보낼 수 있습니다
             </s.ContentRole>
           </s.Content>
           <s.Content>
@@ -58,7 +47,7 @@ const Side = () => {
               Skill
             </s.ContentRole>
             <s.ContentRole font_height="1rem" font_mobile="1.25rem">
-              JavaScript, React, FireBase, Styled-Components
+              TypeScript, React, Styled-Components
             </s.ContentRole>
           </s.Content>
           <s.Icon>
@@ -95,4 +84,4 @@ const Side = () => {
     </div>
   );
 };
-export default Side;
+export default Port;

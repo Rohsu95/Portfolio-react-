@@ -1,4 +1,3 @@
-import React from "react";
 import theme from "../../styles/Theme";
 import { styled } from "styled-components";
 import Slider from "react-slick";
@@ -8,15 +7,15 @@ export const TitleContainer = styled.header`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 20vh;
+  height: 22vh;
   align-items: center;
+  margin-bottom: 1rem;
   @media ${theme.media.phone} {
     height: 15vh;
   }
 `;
 export const MainTitle = styled.h1`
   font-size: 6rem;
-  /* margin-bottom: 3rem; */
   background-clip: border-box;
   background: linear-gradient(to right top, #b9eddd, #c9a7eb, #2cd3e1);
   color: transparent;

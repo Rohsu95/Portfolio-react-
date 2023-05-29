@@ -5,7 +5,78 @@ import { MdPhoneIphone } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
 import { GoMail } from "react-icons/go";
 import emailjs from "@emailjs/browser";
-import SectionWrapper from "../../components/Wrapper";
+
+const Contact = () => {
+  const SERVICE_ID: string = process.env.REACT_APP_SERVICE_ID || "";
+  const TEMPLATE_ID: string = process.env.REACT_APP_TEMPLATE_ID || "";
+  const PUBLIC_KEY: string = process.env.REACT_APP_PUBLIC_KEY || "";
+
+  const ref = useRef<HTMLFormElement>(null!);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, ref.current, PUBLIC_KEY).then(
+      (result) => {
+        console.log(result.text);
+        alert("완료");
+      },
+      (err) => {
+        console.log(err);
+        alert("다시 확인해 주세요");
+      }
+    );
+    ref.current.reset();
+  };
+
+  return (
+    <Container>
+      <ImgContainer>
+        <MainTitle>Contact</MainTitle>
+      </ImgContainer>
+      <MainContainer>
+        <ArticleContainer>
+          <SectionContainer>
+            <section className="ModalIcon">
+              <MdPhoneIphone size="45" color="black" />
+            </section>
+            <section className="ModalText">010-4964-2335</section>
+          </SectionContainer>
+          <SectionContainer>
+            <section className="ModalIcon">
+              <GoMail size="45" color="black" />
+            </section>
+            <section className="ModalText">shtngur10@gmail.com</section>
+          </SectionContainer>
+          <SectionContainer>
+            <section className="ModalIcon">
+              <a
+                href="https://github.com/rohsuhyoek"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <FaGithub size="45" color="black" />
+              </a>
+            </section>
+            <section className="ModalText">GitHub!</section>
+          </SectionContainer>
+        </ArticleContainer>
+        <FormContainer ref={ref} onSubmit={sendEmail}>
+          <TitleContainer>
+            <InputContainer type="text" placeholder="Name" name="name" />
+          </TitleContainer>
+          <TitleContainer>
+            <InputContainer type="email" placeholder="Email" name="email" />
+          </TitleContainer>
+          <TitleContainer>
+            <TextContainer placeholder="Message" name="message" />
+          </TitleContainer>
+          <Button type="submit">Send</Button>
+        </FormContainer>
+      </MainContainer>
+    </Container>
+  );
+};
 
 const Container = styled.div``;
 const ImgContainer = styled.section`
@@ -13,7 +84,6 @@ const ImgContainer = styled.section`
   justify-content: center;
   height: 30vh;
   align-items: center;
-  /* border: 2px solid red; */
 `;
 const MainTitle = styled.h1`
   font-size: 6rem;
@@ -83,9 +153,8 @@ const SectionContainer = styled.section`
       width: 30px;
     }
     @media ${theme.media.phone} {
-      width: 30px; // 360
+      width: 30px;
       display: flex;
-      /* justify-content: center; */
     }
   }
 `;
@@ -99,7 +168,6 @@ const TitleContainer = styled.div`
   justify-content: center;
 
   @media ${theme.media.mobile} {
-    /* width: 4 */
   }
 `;
 const InputContainer = styled.input`
@@ -115,11 +183,10 @@ const InputContainer = styled.input`
     color: ${theme.colors.font};
   }
   @media ${theme.media.mobile} {
-    width: 350px; // 360
+    width: 350px;
   }
   @media ${theme.media.phone} {
-    /* width: 320px; // 360 */
-    width: 70vw; // 360
+    width: 70vw;
   }
 `;
 const TextContainer = styled.textarea`
@@ -154,77 +221,5 @@ const Button = styled.button`
     border: 2px solid ${theme.colors.font_hover};
   }
 `;
-const Contact = () => {
-  const SERVICE_ID: string = process.env.REACT_APP_SERVICE_ID || "";
-  const TEMPLATE_ID: string = process.env.REACT_APP_TEMPLATE_ID || "";
-  const PUBLIC_KEY: string = process.env.REACT_APP_PUBLIC_KEY || "";
-
-  const ref = useRef<HTMLFormElement>(null!);
-
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, ref.current, PUBLIC_KEY).then(
-      (result) => {
-        console.log(result.text);
-        alert("완료");
-      },
-      (err) => {
-        console.log(err);
-        alert("다시 확인해 주세요");
-      }
-    );
-    ref.current.reset();
-  };
-
-  return (
-    <SectionWrapper id="contact">
-      {/* <Container></Container> */}
-      <ImgContainer>
-        <MainTitle>Contact</MainTitle>
-      </ImgContainer>
-      <MainContainer>
-        <ArticleContainer>
-          <SectionContainer>
-            <section className="ModalIcon">
-              <MdPhoneIphone size="45" color="black" />
-            </section>
-            <section className="ModalText">010-4964-2335</section>
-          </SectionContainer>
-          <SectionContainer>
-            <section className="ModalIcon">
-              <GoMail size="45" color="black" />
-            </section>
-            <section className="ModalText">shtngur10@gmail.com</section>
-          </SectionContainer>
-          <SectionContainer>
-            <section className="ModalIcon">
-              <a
-                href="https://github.com/rohsuhyoek"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <FaGithub size="45" color="black" />
-              </a>
-            </section>
-            <section className="ModalText">클릭!</section>
-          </SectionContainer>
-        </ArticleContainer>
-        <FormContainer ref={ref} onSubmit={sendEmail}>
-          <TitleContainer>
-            <InputContainer type="text" placeholder="Name" name="name" />
-          </TitleContainer>
-          <TitleContainer>
-            <InputContainer type="email" placeholder="Email" name="email" />
-          </TitleContainer>
-          <TitleContainer>
-            <TextContainer placeholder="Message" name="message" />
-          </TitleContainer>
-          <Button type="submit">Send</Button>
-        </FormContainer>
-      </MainContainer>
-    </SectionWrapper>
-  );
-};
 
 export default Contact;

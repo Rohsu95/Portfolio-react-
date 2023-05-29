@@ -2,6 +2,22 @@ import React from "react";
 import { styled } from "styled-components";
 import theme from "../styles/Theme";
 import { HashLink } from "react-router-hash-link";
+import { ProjectItemProps } from "../types/project";
+
+export const ProjectItem: React.FC<ProjectItemProps> = ({
+  project,
+  url,
+  id,
+}) => {
+  return (
+    <SectionContainer key={id}>
+      <Img src={url} alt="mainImg" />
+      <AMove to={`/${project}`}>
+        <span>더 보기</span>
+      </AMove>
+    </SectionContainer>
+  );
+};
 
 const SectionContainer = styled.section`
   display: flex;
@@ -26,6 +42,8 @@ const AMove = styled(HashLink)`
   display: flex;
   justify-content: center;
   margin-top: 2rem;
+  text-decoration: none;
+
   span {
     border: 2px solid ${theme.colors.font};
     color: ${theme.colors.font};
@@ -37,20 +55,3 @@ const AMove = styled(HashLink)`
     justify-content: center;
   }
 `;
-interface ProjectItemProps {
-  project: string;
-  url: string;
-  id: number;
-}
-
-const ProjectItem: React.FC<ProjectItemProps> = ({ project, url, id }) => {
-  return (
-    <SectionContainer key={id}>
-      <Img src={url} alt="mainImg" />
-      <AMove to={`/${project}`}>
-        <span>더 보기</span>
-      </AMove>
-    </SectionContainer>
-  );
-};
-export default ProjectItem;

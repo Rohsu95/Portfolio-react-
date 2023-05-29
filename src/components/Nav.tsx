@@ -1,7 +1,31 @@
 import React from "react";
 import { styled } from "styled-components";
 import theme from "../styles/Theme";
-import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
+
+const Nav = () => {
+  return (
+    <NavContainer>
+      <UlContainer>
+        <LiContainer>
+          <LinkTo to="/">
+            <NavSPan>About</NavSPan>
+          </LinkTo>
+        </LiContainer>
+        <LiContainer>
+          <LinkTo to="project">
+            <NavSPan> Project</NavSPan>
+          </LinkTo>
+        </LiContainer>
+        <LiContainer>
+          <LinkTo to="contact">
+            <NavSPan>Contact</NavSPan>
+          </LinkTo>
+        </LiContainer>
+      </UlContainer>
+    </NavContainer>
+  );
+};
 
 const NavContainer = styled.nav``;
 const UlContainer = styled.ul`
@@ -29,39 +53,9 @@ const NavSPan = styled.span`
     color: ${theme.colors.font_hover};
   }
 `;
-const Nav = () => {
-  return (
-    <NavContainer>
-      <UlContainer>
-        <LiContainer>
-          <HashLink
-            smooth
-            to="/"
-            style={{ textDecoration: "none", color: `${theme.colors.font}` }}
-          >
-            <NavSPan>About</NavSPan>
-          </HashLink>
-        </LiContainer>
-        <LiContainer>
-          <HashLink
-            smooth
-            to="project"
-            style={{ textDecoration: "none", color: `${theme.colors.font}` }}
-          >
-            <NavSPan> Project</NavSPan>
-          </HashLink>
-        </LiContainer>
-        <LiContainer>
-          <HashLink
-            smooth
-            to="contact"
-            style={{ textDecoration: "none", color: `${theme.colors.font}` }}
-          >
-            <NavSPan>Contact</NavSPan>
-          </HashLink>
-        </LiContainer>
-      </UlContainer>
-    </NavContainer>
-  );
-};
+const LinkTo = styled(Link)`
+  text-decoration: none;
+  color: ${theme.colors.font};
+`;
+
 export default Nav;

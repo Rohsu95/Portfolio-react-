@@ -4,6 +4,44 @@ import { FaGithub } from "react-icons/fa";
 import { RxNotionLogo } from "react-icons/rx";
 import theme from "../../styles/Theme";
 
+const Home = () => {
+  return (
+    <MainContainer>
+      <ImgContainer>
+        <img src="/image/main.jpg" alt="mainImg" />
+      </ImgContainer>
+
+      <ArticleContainer>
+        <TitleContainer>Web Developer</TitleContainer>
+        <SectionContainer>노력은 배신하지 않습니다.</SectionContainer>
+        <SectionContainer>
+          느리더라도 포기 하지 않는 변함없는 개발자가 되겠습니다.
+        </SectionContainer>
+        <Icon>
+          <IconContainer>
+            <a
+              href="https://github.com/rohsuhyoek"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <FaGithub size="45" color="black" />
+            </a>
+          </IconContainer>
+          <IconContainer>
+            <a
+              href="https://github.com/rohsuhyoek"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <RxNotionLogo size="45" color="black" />
+            </a>
+          </IconContainer>
+        </Icon>
+      </ArticleContainer>
+    </MainContainer>
+  );
+};
+
 const MainContainer = styled.div`
   display: flex;
   justify-content: space-around;
@@ -82,42 +120,5 @@ const IconContainer = styled.div`
 const Icon = styled.div`
   display: flex;
 `;
-const Home = () => {
-  return (
-    <MainContainer>
-      <ImgContainer>
-        <img src="/image/main.jpg" alt="mainImg" />
-      </ImgContainer>
-
-      <ArticleContainer>
-        <TitleContainer>Web Developer</TitleContainer>
-        <SectionContainer>노력은 배신하지 않습니다.</SectionContainer>
-        <SectionContainer>
-          느리더라도 포기 하지 않는 변함없는 개발자가 되겠습니다.
-        </SectionContainer>
-        <Icon>
-          <IconContainer>
-            <a
-              href="https://github.com/rohsuhyoek"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <FaGithub size="45" color="black" />
-            </a>
-          </IconContainer>
-          <IconContainer>
-            <a
-              href="https://github.com/rohsuhyoek"
-              target="_blank"
-              rel="noreferrer noopener"
-            >
-              <RxNotionLogo size="45" color="black" />
-            </a>
-          </IconContainer>
-        </Icon>
-      </ArticleContainer>
-    </MainContainer>
-  );
-};
 
 export default Home;

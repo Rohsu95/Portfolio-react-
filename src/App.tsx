@@ -1,4 +1,3 @@
-import React from "react";
 import GlobalStyle from "./styles/GlobalStyle";
 import { ThemeProvider } from "styled-components";
 import theme from "./styles/Theme";
@@ -9,6 +8,7 @@ import Contact from "./page/Contact/Contact";
 import Header from "./components/Header";
 import Main from "./page/Item/Main/Main";
 import Side from "./page/Item/Side/Side";
+import Port from "./page/Item/Portfolio/Port";
 
 function App() {
   return (
@@ -22,7 +22,8 @@ function App() {
             <Route path="/project" element={<Project />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/main" element={<Main />} />
-            <Route path="/:project" element={<Side />} />
+            <Route path="/side" element={<Side />} />
+            <Route path="/port" element={<Port />} />
           </Routes>
         </Router>
       </ThemeProvider>

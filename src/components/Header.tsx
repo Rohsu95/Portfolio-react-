@@ -2,6 +2,16 @@ import React from "react";
 import { styled } from "styled-components";
 import theme from "../styles/Theme";
 import Nav from "./Nav";
+import { Link } from "react-router-dom";
+
+const Header = () => {
+  return (
+    <HeaderContainer>
+      <NameContainer to="/">Su-Hyeok</NameContainer>
+      <Nav />
+    </HeaderContainer>
+  );
+};
 
 const HeaderContainer = styled.header`
   width: 100%;
@@ -14,9 +24,12 @@ const HeaderContainer = styled.header`
     justify-content: center;
   }
 `;
-const NameContainer = styled.h1`
+const NameContainer = styled(Link)`
   margin-left: 2rem;
   color: ${theme.colors.font};
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 1000;
   &:hover {
     color: ${theme.colors.font_hover};
   }
@@ -28,12 +41,5 @@ const NameContainer = styled.h1`
     display: none;
   }
 `;
-const Header = () => {
-  return (
-    <HeaderContainer>
-      <NameContainer>Su-Hyeok</NameContainer>
-      <Nav />
-    </HeaderContainer>
-  );
-};
+
 export default Header;
