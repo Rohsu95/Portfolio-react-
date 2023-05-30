@@ -73,7 +73,7 @@ const Side = () => {
             </s.IconContainer>
             <s.IconContainer>
               <a
-                href="https://www.notion.so/Real-World-248480c6ec99403d8af906888a429e9b"
+                href="https://universal-finch-bc7.notion.site/Real-World-248480c6ec99403d8af906888a429e9b"
                 target="_blank"
                 rel="noreferrer noopener"
               >
@@ -82,7 +82,7 @@ const Side = () => {
             </s.IconContainer>
             <s.IconContainer>
               <a
-                href="http://pre41-deploy-test.s3-website.ap-northeast-2.amazonaws.com/"
+                href="https://side-project-wty4.vercel.app/"
                 target="_blank"
                 rel="noreferrer noopener"
               >

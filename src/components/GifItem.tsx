@@ -103,3 +103,29 @@ export const SideItem = () => {
     </s.SliderStyle>
   );
 };
+export const PortItem = () => {
+  const Port = [
+    {
+      id: 31,
+      url: "/image/port1.gif",
+      alt: "About 페이지",
+    },
+    {
+      id: 32,
+      url: "/image/port2.gif",
+      alt: "Project 페이지",
+    },
+    {
+      id: 33,
+      url: "/image/port3.gif",
+      alt: "contact 페이지",
+    },
+  ];
+  return (
+    <s.SliderStyle {...settings}>
+      {Port.map((item) => (
+        <s.Img key={item.id} src={item.url} alt={item.alt} />
+      ))}
+    </s.SliderStyle>
+  );
+};

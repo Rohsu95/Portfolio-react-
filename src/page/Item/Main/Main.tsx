@@ -59,7 +59,7 @@ const Main = () => {
             </s.IconContainer>
             <s.IconContainer>
               <a
-                href="https://github.com/rohsuhyoek"
+                href="https://universal-finch-bc7.notion.site/ef51561c08cf46bcb5634b35267777c0"
                 target="_blank"
                 rel="noreferrer noopener"
               >

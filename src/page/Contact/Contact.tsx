@@ -51,7 +51,7 @@ const Contact = () => {
           <SectionContainer>
             <section className="ModalIcon">
               <a
-                href="https://github.com/rohsuhyoek"
+                href="https://github.com/Rohsu95"
                 target="_blank"
                 rel="noreferrer noopener"
               >

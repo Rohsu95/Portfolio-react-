@@ -20,7 +20,7 @@ const Home = () => {
         <Icon>
           <IconContainer>
             <a
-              href="https://github.com/rohsuhyoek"
+              href="https://github.com/Rohsu95"
               target="_blank"
               rel="noreferrer noopener"
             >
@@ -29,7 +29,7 @@ const Home = () => {
           </IconContainer>
           <IconContainer>
             <a
-              href="https://github.com/rohsuhyoek"
+              href="https://universal-finch-bc7.notion.site/6903eccb1e784dee8ff8fecd1c5f3eee"
               target="_blank"
               rel="noreferrer noopener"
             >

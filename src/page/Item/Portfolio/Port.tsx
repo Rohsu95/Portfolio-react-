@@ -5,7 +5,7 @@ import theme from "../../../styles/Theme";
 import { FaGithub } from "react-icons/fa";
 import { RxNotionLogo } from "react-icons/rx";
 import { SlControlPlay } from "react-icons/sl";
-import { SideItem } from "../../../components/GifItem";
+import { PortItem } from "../../../components/GifItem";
 import * as s from "../style";
 
 const Port = () => {
@@ -15,7 +15,7 @@ const Port = () => {
         <s.MainTitle>PortFolio</s.MainTitle>
       </s.TitleContainer>
       <s.ArticleContainer>
-        <SideItem />
+        <PortItem />
         <s.ContentContainer>
           <s.Content>
             <s.ContentRole font_height="1rem" font_mobile="1.25rem">
@@ -53,7 +53,7 @@ const Port = () => {
           <s.Icon>
             <s.IconContainer>
               <a
-                href="https://github.com/rohsuhyoek/Side-Project"
+                href="https://github.com/Rohsu95/Portfolio"
                 target="_blank"
                 rel="noreferrer noopener"
               >
@@ -62,20 +62,11 @@ const Port = () => {
             </s.IconContainer>
             <s.IconContainer>
               <a
-                href="https://www.notion.so/Real-World-248480c6ec99403d8af906888a429e9b"
+                href="https://universal-finch-bc7.notion.site/PortPolio-2138ea9ca4b24155bc315f8816639322"
                 target="_blank"
                 rel="noreferrer noopener"
               >
                 <RxNotionLogo size="45" color="black" />
-              </a>
-            </s.IconContainer>
-            <s.IconContainer>
-              <a
-                href="http://pre41-deploy-test.s3-website.ap-northeast-2.amazonaws.com/"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                <SlControlPlay size="45" color="black" />
               </a>
             </s.IconContainer>
           </s.Icon>
