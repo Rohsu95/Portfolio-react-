@@ -113,11 +113,16 @@ export const PortItem = () => {
     {
       id: 32,
       url: "/image/port2.gif",
-      alt: "Project 페이지",
+      alt: "Project 페이지(1)",
     },
     {
       id: 33,
       url: "/image/port3.gif",
+      alt: "Project 페이지(2)",
+    },
+    {
+      id: 34,
+      url: "/image/port4.gif",
       alt: "contact 페이지",
     },
   ];
