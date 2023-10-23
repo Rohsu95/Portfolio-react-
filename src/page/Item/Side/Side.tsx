@@ -20,8 +20,8 @@ const Side = () => {
           <s.Content>
             <s.ContentRole font_height="1rem" font_mobile="1.25rem">
               부트캠프에서 배운 내용들을 정리 하기 위해 수료 후 만든 1인
-              프로젝트 입니다. Fire Base를 사용하였으며 사용자 인증 기능 및
-              CRUD가 포함 커뮤니티 페이지입니다.
+              프로젝트 입니다. Node.js와 MongoDB를 사용하였으며 사용자 인증 기능
+              및 CRUD가 포함 커뮤니티 페이지입니다.
             </s.ContentRole>
           </s.Content>
           <s.Content>
@@ -29,8 +29,9 @@ const Side = () => {
               My Role
             </s.ContentRole>
             <s.ContentRole font_height="1rem" font_mobile="1.25rem">
-              회원 가입, 로그인 페이지 : Fire Base를 사용자 인증 기능이 있으며,
-              유효성 검사 후 로그인.
+              회원 가입, 로그인 페이지 : Node.js를 사용자 인증 기능과 토큰이
+              있으며, 회원 가입 시 프로필 이미지 선택 기능, 유효성 검사 후
+              로그인.
             </s.ContentRole>
             <s.ContentRole font_height="1rem" font_mobile="1.25rem">
               게시글 작성 페이지 : 게시글 작성 (제목, 소제목, 내용, 태그) 기능
@@ -38,7 +39,7 @@ const Side = () => {
             </s.ContentRole>
             <s.ContentRole font_height="1rem" font_mobile="1.25rem">
               커뮤니티 페이지 : 내가 작성한 글만 보기 기능, 내가 작성한 글 삭제
-              기능, 좋아요 기능,
+              기능
             </s.ContentRole>
             <s.ContentRole font_height="1rem" font_mobile="1.25rem">
               특정 게시글 조회 페이지 : 선택한 게시글 조회, 댓글 작성, 삭제 기능
@@ -47,7 +48,7 @@ const Side = () => {
               게시글 수정 페이지 : 작성한 게시글 수정 기능
             </s.ContentRole>
             <s.ContentRole font_height="1rem" font_mobile="1.25rem">
-              마이 페이지 : 프로필 이미지 업로드, 로그 아웃 기능
+              마이 페이지 : 내가 작성한 글 보기 기능, 로그 아웃 기능
             </s.ContentRole>
             <s.ContentRole font_height="1rem" font_mobile="1.25rem">
               개인 정보 수정 페이지 : 닉네임, 이메일, 패스워드 수정 기능
@@ -58,7 +59,7 @@ const Side = () => {
               Skill
             </s.ContentRole>
             <s.ContentRole font_height="1rem" font_mobile="1.25rem">
-              JavaScript, React, FireBase, Styled-Components
+              JavaScript, React, Node.js, MongoDB, Styled-Components
             </s.ContentRole>
           </s.Content>
           <s.Icon>

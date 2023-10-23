@@ -77,22 +77,32 @@ export const SideItem = () => {
     {
       id: 21,
       url: "/image/side1.gif",
-      alt: "회원 가입, 로그인",
+      alt: "회원 가입, 로그인, 프로필 사진",
     },
     {
       id: 22,
       url: "/image/side2.gif",
-      alt: "게시글 작성, 좋아요, 삭제",
+      alt: "게시글 작성",
     },
     {
       id: 23,
       url: "/image/side3.gif",
-      alt: "회원 정보 수정,이미지 업로드, 로그 아웃",
+      alt: "게시글 수정",
     },
     {
       id: 24,
       url: "/image/side4.gif",
-      alt: "댓글 작성,삭제, 게시글 수정",
+      alt: "댓글 작성, 삭제",
+    },
+    {
+      id: 25,
+      url: "/image/side5.gif",
+      alt: "유저 정보 수정",
+    },
+    {
+      id: 26,
+      url: "/image/side6.gif",
+      alt: "게시글 삭제, 로그 아웃",
     },
   ];
   return (
