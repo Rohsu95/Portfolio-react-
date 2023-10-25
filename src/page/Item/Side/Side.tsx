@@ -83,7 +83,7 @@ const Side = () => {
             </s.IconContainer>
             <s.IconContainer>
               <a
-                href="https://side-project-wty4.vercel.app/"
+                href="https://side-project-de46.vercel.app/"
                 target="_blank"
                 rel="noreferrer noopener"
               >
