@@ -2,7 +2,7 @@
 ❤️‍🔥 개인 포트폴리오 사이트입니다.
 
 ## 프로젝트 미리보기
-# Abuot
+# About
 ![port1](https://github.com/Rohsu95/Portfolio/assets/97446711/09b80d16-8d60-43b5-b256-9f9b59163836)
 
 # Project
