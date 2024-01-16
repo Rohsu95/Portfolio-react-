@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { styled } from "styled-components";
 import theme from "../../styles/Theme";
 import { MdPhoneIphone } from "react-icons/md";
@@ -11,21 +11,44 @@ const Contact = () => {
   const TEMPLATE_ID: string = process.env.REACT_APP_TEMPLATE_ID || "";
   const PUBLIC_KEY: string = process.env.REACT_APP_PUBLIC_KEY || "";
 
+  const [input, setInput] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const { name, email, message } = input;
+
   const ref = useRef<HTMLFormElement>(null!);
+
+  const onChecked = (
+    e:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
+  ) => {
+    setInput((prevInput) => ({
+      ...prevInput,
+      [e.target.name]: e.target.value,
+    }));
+  };
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (name && email && message) {
+      emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, ref.current, PUBLIC_KEY).then(
+        (result) => {
+          // console.log(result.text);
 
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, ref.current, PUBLIC_KEY).then(
-      (result) => {
-        console.log(result.text);
-        alert("완료");
-      },
-      (err) => {
-        console.log(err);
-        alert("다시 확인해 주세요");
-      }
-    );
+          alert("완료");
+        },
+        (err) => {
+          console.log(err);
+          alert("다시 확인해 주세요");
+        }
+      );
+    } else {
+      alert("name, email, message를 모두 작성해 주세요");
+    }
     ref.current.reset();
   };
 
@@ -46,7 +69,7 @@ const Contact = () => {
             <section className="ModalIcon">
               <GoMail size="45" color="black" />
             </section>
-            <section className="ModalText">shtngur10@gmail.com</section>
+            <section className="ModalText">rohsu1995@gmail.com</section>
           </SectionContainer>
           <SectionContainer>
             <section className="ModalIcon">
@@ -63,13 +86,30 @@ const Contact = () => {
         </ArticleContainer>
         <FormContainer ref={ref} onSubmit={sendEmail}>
           <TitleContainer>
-            <InputContainer type="text" placeholder="Name" name="name" />
+            <InputContainer
+              type="text"
+              onChange={onChecked}
+              placeholder="Name"
+              value={name}
+              name="name"
+            />
           </TitleContainer>
           <TitleContainer>
-            <InputContainer type="email" placeholder="Email" name="email" />
+            <InputContainer
+              type="email"
+              onChange={onChecked}
+              placeholder="Email"
+              value={email}
+              name="email"
+            />
           </TitleContainer>
           <TitleContainer>
-            <TextContainer placeholder="Message" name="message" />
+            <TextContainer
+              placeholder="Message"
+              onChange={onChecked}
+              value={message}
+              name="message"
+            />
           </TitleContainer>
           <Button type="submit">Send</Button>
         </FormContainer>
