@@ -7,6 +7,7 @@
 - 기본 소개
 # Project
 ![port3](https://github.com/Rohsu95/Portfolio/assets/97446711/abd1942a-ebfd-41f6-99ab-6aa9ce4bc4f6)
-
+- Project 미리보기를 위해 slick과 gif을 사용하여 슬라이드 구현
 # Contact
 ![port4](https://github.com/Rohsu95/Portfolio/assets/97446711/4c2372d5-5e38-4862-859f-e36e7a76edbb)
+- email을 보내기 위해 email.js 라이브러리를 사용하여 Gmail과 연동
