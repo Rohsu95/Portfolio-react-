@@ -12,15 +12,15 @@ export const ProjectItem: React.FC<ProjectItemProps> = ({
   return (
     <SectionContainer key={id}>
       <Img src={url} alt="mainImg" />
-      <AMove to={`/${project}`}>
-        <span>더 보기</span>
-      </AMove>
+      <AMove to={`/${project}`}>더 보기</AMove>
     </SectionContainer>
   );
 };
 
 const SectionContainer = styled.section`
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   margin-bottom: 2rem;
 `;
@@ -43,15 +43,17 @@ const AMove = styled(HashLink)`
   justify-content: center;
   margin-top: 2rem;
   text-decoration: none;
+  border: 2px solid ${theme.colors.font};
+  color: ${theme.colors.font};
+  border-radius: 10px;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  span {
-    border: 2px solid ${theme.colors.font};
-    color: ${theme.colors.font};
-    border-radius: 10px;
-    width: 200px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  &:hover {
+    border: 2px solid ${theme.colors.font_hover};
+    color: ${theme.colors.font_hover};
   }
 `;
