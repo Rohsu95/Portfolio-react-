@@ -254,7 +254,7 @@ const Button = styled.button`
   width: 12vw;
   font-size: 1.25rem;
   color: ${theme.colors.font};
-  border-bottom: 2px solid ${theme.colors.font};
+  border: 2px solid ${theme.colors.font};
 
   &:hover {
     color: ${theme.colors.font_hover};
